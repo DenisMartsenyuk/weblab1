@@ -1,0 +1,182 @@
+#generalTable {
+    border: 2px solid #32D4E2;
+    border-radius: 20px;
+    width: 80em;
+    height: 25em;
+    margin: auto;
+}
+
+#headerText {
+    border: 2px solid #47A1AA;
+    font-family: Roboto-BlackItalic;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 17px 17px 0px 0px;
+    background-color: #47A1AA;
+    color: #EDFEFF;
+}
+
+#graphicsBlock {
+    border: 2px solid #32D4E2;
+    border-radius: 0px 0px 0px 17px;
+    width: 10em;
+}
+
+#tableBlock {
+    border: 2px solid #32D4E2;
+    border-radius: 0px 0px 17px 0px;
+    width: 30em;
+}
+
+#centerBlock {
+    border: 2px solid #32D4E2;
+}
+
+#centerTable {
+    height: 100%;
+}
+
+.scrollTable {
+    vertical-align: top;
+    height: 100%;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.headerResTable {
+    background-color: #47A1AA;
+    color: #EDFEFF;
+    height: 2em;
+    padding: 2px 10px 2px 10px;
+}
+
+.instructionLabels {
+    font-size: 20px;
+    font-family: Roboto-Regular;
+    padding: 5px 10px 10px 10px;
+}
+
+#tableResult {
+    border-collapse: collapse;
+}
+
+#yValue {
+    font-size: 20px;
+    horiz-align: center;
+    width: 99%;
+    border: 0.5px solid black;
+}
+
+#yValue:hover {
+    border: 0.5px solid #47A1AA;
+}
+
+[name='radioGroup']:after {
+    width: 11px;
+    height:11px;
+    border-radius: 11px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #32D4E2;
+}
+
+[name='radioGroup']:hover:after {
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    border: 3px solid #47A1AA;
+    top: -5px;
+    left: -5px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+[name='radioGroup']:checked:after {
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    border: 3px solid #47A1AA;
+    top: -5px;
+    left: -5px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+
+* {
+    font-size: 18px;
+    font-family: Roboto-Italic;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto-BlackItalic';
+    src: url("../fonts/Roboto-BlackItalic.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url("../fonts/Roboto-Italic.ttf");
+}
+
+/*todo доделать шрифты*/
+
+.maxWidthTable {
+    width: 100%;
+}
+
+#send {
+    width: 100%;
+}
+
+button {
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    border-radius: 4px;
+    position: relative;
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-family: Roboto-Italic;
+    padding: 13px 39px 13px 39px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #47A1AA;
+    background: transparent;
+    border: 2px solid #47A1AA;
+    position: relative;
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-family: Roboto-Italic;
+    padding: 13px 39px 13px 39px;
+    cursor: pointer;
+}
+
+.selected {
+    color: #47A1AA;
+    background: transparent;
+    border: 2px solid #47A1AA;
+    position: relative;
+    letter-spacing: .1em;
+    font-size: 20px;
+    font-family: Roboto-Italic;
+    padding: 17px 39px 17px 39px !important;
+    cursor: pointer;
+}

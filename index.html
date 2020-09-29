@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab1</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <!--         Основная таблица страницы-->
+        <table border="0.5" id="generalTable" class="maxWidthTable">
+            <tr>
+                <td colspan="3" id="headerText">Лабораторная работа №1. Марценюк Д.А. P3211. Вариант 2214.</td>
+            </tr>
+
+            <tr>
+                <td id="graphicsBlock">
+                    <!--                 График-->
+                    <svg width="300" height="300" class="svg-graph" xmlns="http://www.w3.org/2000/svg">
+
+                        <!--            Линии оси-->
+
+                        <line class="axis" x1="0" x2="300" y1="150" y2="150" stroke="black"></line>
+                        <line class="axis" x1="150" x2="150" y1="0" y2="300" stroke="black"></line>
+                        <polygon points="150,0 144,15 156,15" stroke="black"></polygon>
+                        <polygon points="300,150 285,156 285,144" stroke="black"></polygon>
+
+                        <line class="coor-line" x1="200" x2="200" y1="155" y2="145" stroke="black"></line>
+                        <line class="coor-line" x1="250" x2="250" y1="155" y2="145" stroke="black"></line>
+
+                        <line class="coor-line" x1="50"  x2="50"  y1="155" y2="145" stroke="black"></line>
+                        <line class="coor-line" x1="100" x2="100" y1="155" y2="145" stroke="black"></line>
+
+                        <line class="coor-line" x1="145" x2="155" y1="100" y2="100" stroke="black"></line>
+                        <line class="coor-line" x1="145" x2="155" y1="50"  y2="50"  stroke="black"></line>
+
+                        <line class="coor-line" x1="145" x2="155" y1="200" y2="200" stroke="black"></line>
+                        <line class="coor-line" x1="145" x2="155" y1="250" y2="250" stroke="black"></line>
+
+                        <text class="coor-text" x="195" y="140">R/2</text>
+                        <text class="coor-text" x="248" y="140">R</text>
+
+                        <text class="coor-text" x="40" y="140">-R</text>
+                        <text class="coor-text" x="90" y="140">-R/2</text>
+
+                        <text class="coor-text" x="160" y="105">R/2</text>
+                        <text class="coor-text" x="160" y="55">R</text>
+
+                        <text class="coor-text" x="160" y="205">-R/2</text>
+                        <text class="coor-text" x="160" y="255">-R</text>
+
+                        <polygon class="svg-figure rectangle-figure" points="150,150 150,50 250,50, 250,150"
+                                 fill="#32D4E2" fill-opacity="0.3" stroke="#32D4E2" ></polygon>
+
+                        <path  class="svg-figure circle-figure" d="M 150 250 A 100 100, 90, 0, 0, 250 150 L 150 150 Z"
+                               fill="#32D4E2" fill-opacity="0.3" stroke="#32D4E2"></path>
+
+                        <polygon class="svg-figure triangle-figure" points="50,150 150,100 150,150"
+                                 fill="#32D4E2" fill-opacity="0.3" stroke="#32D4E2"></polygon>
+
+
+                    </svg>
+                </td>
+                <td id="centerBlock">
+                    <!--                Таблица полей ввода-->
+                    <table id="centerTable" class="maxWidthTable">
+                        <tr>
+                            <td>
+                                <!--                    Таблица для выбора X-->
+                                <table class="maxWidthTable">
+                                    <tr>
+                                        <th colspan="9" class="instructionLabels">Укажите X</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="radioGroup" type="radio" value="-4" class="custom-radios" checked> -4</td>
+                                        <td><input name="radioGroup" type="radio" value="-3"> -3</td>
+                                        <td><input name="radioGroup" type="radio" value="-2"> -2</td>
+                                        <td><input name="radioGroup" type="radio" value="-1"> -1</td>
+                                        <td><input name="radioGroup" type="radio" value="0"> 0</td>
+                                        <td><input name="radioGroup" type="radio" value="1"> 1</td>
+                                        <td><input name="radioGroup" type="radio" value="2"> 2</td>
+                                        <td><input name="radioGroup" type="radio" value="3"> 3</td>
+                                        <td><input name="radioGroup" type="radio" value="4"> 4</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <!--                    Таблица для ввода Y-->
+                                <table class="maxWidthTable">
+                                    <tr>
+                                        <th class="instructionLabels">Укажите Y</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input placeholder="[-3;3]" id="yValue" onchange="getAndCheckY()"
+                                                   onclick="whiteColorInput()" maxlength="17"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <!--                    Таблица для выбора R-->
+                                <table class="maxWidthTable">
+                                    <tr>
+                                        <th colspan="9" class="instructionLabels">Укажите R</th>
+                                    </tr>
+                                    <tr>
+                                        <td><button value="1" onfocus="blur()" class="selected" onclick="selectR(this)">1</button></td>
+                                        <td><button value="2" onfocus="blur()" class="not_selected" onclick="selectR(this)">2</button></td>
+                                        <td><button value="3" onfocus="blur()" class="not_selected" onclick="selectR(this)">3</button></td>
+                                        <td><button value="4" onfocus="blur()" class="not_selected" onclick="selectR(this)">4</button></td>
+                                        <td><button value="5" onfocus="blur()" class="not_selected" onclick="selectR(this)">5</button></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button onfocus="blur()" onclick="buildRequest()" id="send" class="button-1">Отправить</button></td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td id="tableBlock">
+                    <!--                Таблица ответов-->
+                    <div class="scrollTable">
+                        <table id="tableResult"  class="maxWidthTable">
+                            <tr>
+                                <th class="headerResTable">X</th>
+                                <th class="headerResTable">Y</th>
+                                <th class="headerResTable">R</th>
+                                <th class="headerResTable">Результат</th>
+                                <th class="headerResTable">Текущее время</th>
+                                <th class="headerResTable">Время выполнения (мс)</th>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
