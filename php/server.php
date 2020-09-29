@@ -6,6 +6,9 @@ $rValue = $_GET["r"];
 session_start();
 
 date_default_timezone_set('Europe/Moscow');
+$xValue=str_replace(",",".",$xValue);
+$yValue=str_replace(",",".",$yValue);
+$rValue=str_replace(",",".",$rValue);
 $currentTime = date("H:i:s");
 $startTime = microtime(true);
 
