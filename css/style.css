@@ -189,3 +189,9 @@ button:hover {
     padding: 17px 39px 17px 39px !important;
     cursor: pointer;
 }
+
+.figures {
+    fill: #32D4E2;
+    fill-opacity: 0.3;
+    stroke: #32D4E2;
+}
